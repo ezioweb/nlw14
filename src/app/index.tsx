@@ -26,8 +26,8 @@ export default function Home() {
         }
     }
     return (
-        <View className='flex-1 p-8'>
-            <Header title="faça seu pedido" cartQuantityItems={cartQuantityItems} />
+        <View className='flex-1 pt-10'>
+            <Header title="Faça seu pedido" cartQuantityItems={cartQuantityItems} />
             <FlatList
                 data={CATEGORIES}
                 keyExtractor={(item) => item}
@@ -37,7 +37,7 @@ export default function Home() {
                     onPress={() => handleCategorySelect(item)}
                 />}
                 horizontal
-                className='max-h-10 mt-5'
+                className='max-h-10 mt-2'
                 contentContainerStyle={{ gap: 12, paddingHorizontal: 20 }}
                 showsHorizontalScrollIndicator={false}
             />
@@ -51,8 +51,8 @@ export default function Home() {
                     <Product data={item} />
                 </Link>)}
                 renderSectionHeader={({ section: { title } }) =>
-                    <Text className='text-xl text-white font-heading mt-8 mb-3'>{title}</Text>}
-                className='flex-1 p-5'
+                    <Text className='text-xl text-white font-heading mt-2 mb-2'>{title}</Text>}
+                className='flex-1 p-4'
                 showsVerticalScrollIndicator={false}
                 contentContainerStyle={{ paddingBottom: 100 }}
             />
